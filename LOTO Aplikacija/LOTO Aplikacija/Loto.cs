@@ -66,5 +66,6 @@ namespace LOTO_Aplikacija
             }
             return brojPogodaka;
         }
+
     }
 }

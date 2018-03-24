@@ -1,4 +1,6 @@
-﻿namespace LOTO_Aplikacija
+﻿using System;
+
+namespace LOTO_Aplikacija
 {
     partial class FormLoto
     {
@@ -242,7 +244,6 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOTO 7/39";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxUplaceni.ResumeLayout(false);
             this.groupBoxUplaceni.PerformLayout();
             this.groupBoxOdigrani.ResumeLayout(false);
