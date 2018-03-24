@@ -14,8 +14,6 @@ namespace LOTO_Aplikacija
         {
             UplaceniBrojevi = new List<int>();
             DobitniBrojevi = new List<int>();
-
-
         }
         public bool UnesiUplaceneBrojeve(List<string> korisnickeVrijednosti)
         {
@@ -42,6 +40,31 @@ namespace LOTO_Aplikacija
                 ispravni = true;
             }
             return ispravni;
+        }
+        public void GenerirajDobitnuKombinaciju()
+        {
+            DobitniBrojevi.Clear();
+            Random generatorBrojeva = new Random();
+            while (DobitniBrojevi.Count<7)
+            {
+                int broj = generatorBrojeva.Next(1, 39);
+                if (DobitniBrojevi.Contains(broj) == false)
+                {
+                    DobitniBrojevi.Add(broj);
+                }
+            }
+        }
+        public int IzracunajBrojPogodaka()
+        {
+            int brojPogodaka = 0;
+            foreach (int broj in UplaceniBrojevi)
+            {
+                if (DobitniBrojevi.Contains(broj)==true)
+                {
+                    brojPogodaka++;
+                }
+            }
+            return brojPogodaka;
         }
     }
 }
